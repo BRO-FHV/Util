@@ -45,15 +45,19 @@ void* LinkedListGetFront(ll_t* list) {
 			return NULL;
 		} else {
 			llnode_t* tmp = list->front;
+			void* data=tmp->data;
 			list->front = NULL;
 			list->back = NULL;
-			return tmp->data;
+			free(tmp);
+			return data;
 		}
 	} else {
 		llnode_t* tmp = list->front;
+		void* data=tmp->data;
 		list->front = tmp->next;
 		list->front->parent = NULL;
-		return tmp->data;
+		free(tmp);
+		return data;
 	}
 }
 void* LinkedListGetBack(ll_t* list) {
