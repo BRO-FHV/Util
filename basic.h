@@ -1,4 +1,5 @@
 /*
+ *
  * Hal: basic.h
  * Part of BRO Project, 2014 <<https://github.com/BRO-FHV>>
  *
@@ -22,7 +23,7 @@
 
 /** Define a boolean type, and values for true and false. */
 
-typedef unsigned char tBoolean;
+typedef unsigned char Boolean;
 
 #ifndef true
 #define true 1
