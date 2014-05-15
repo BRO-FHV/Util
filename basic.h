@@ -32,9 +32,13 @@ typedef unsigned char tBoolean;
 #define false 0
 #endif
 
+#ifndef TRUE
 #define TRUE    1
-#define FALSE   0
+#endif
 
+#ifndef FALSE
+#define FALSE   0
+#endif
 
 #define wait(x)	while(x);
 #define reg32r(b, r) (*(volatile uint32_t *)((b)+(r)))
