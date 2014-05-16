@@ -46,7 +46,6 @@ typedef unsigned char tBoolean;
 #define reg32m(b, r, v) (*((volatile uint32_t *)((b)+(r))) |= (v))
 #define reg32a(b, r, v) (*((volatile uint32_t *)((b)+(r))) &= (v))
 #define reg32an(b, r, v) (*((volatile uint32_t *)((b)+(r))) &= ~(v))
-
 #define reg32wor(b, r, v) (*((volatile uint32_t *)((b)+(r))) |= (v))
 #define reg32wxor(b, r, v) (*((volatile uint32_t *)((b)+(r))) ^= (v))
 
