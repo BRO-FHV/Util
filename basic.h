@@ -23,6 +23,7 @@
 /** Define a boolean type, and values for true and false. */
 
 typedef unsigned char tBoolean;
+typedef unsigned char Boolean;
 
 #ifndef true
 #define true 1
