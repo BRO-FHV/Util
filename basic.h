@@ -33,9 +33,13 @@ typedef unsigned char Boolean;
 #define false 0
 #endif
 
+#ifndef TRUE
 #define TRUE    1
-#define FALSE   0
+#endif
 
+#ifndef FALSE
+#define FALSE   0
+#endif
 
 #define wait(x)	while(x);
 #define reg32r(b, r) (*(volatile uint32_t *)((b)+(r)))
@@ -43,7 +47,6 @@ typedef unsigned char Boolean;
 #define reg32m(b, r, v) (*((volatile uint32_t *)((b)+(r))) |= (v))
 #define reg32a(b, r, v) (*((volatile uint32_t *)((b)+(r))) &= (v))
 #define reg32an(b, r, v) (*((volatile uint32_t *)((b)+(r))) &= ~(v))
-
 #define reg32wor(b, r, v) (*((volatile uint32_t *)((b)+(r))) |= (v))
 #define reg32wxor(b, r, v) (*((volatile uint32_t *)((b)+(r))) ^= (v))
 
